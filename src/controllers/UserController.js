@@ -111,7 +111,7 @@ class UserController {
             emailTo: data.email,
             subject: "Verify your email address Chat",
             html: `Please verify your email address by clicking this
-  <a href="http://localhost:${process.env.PORT || 8888}/auth/verify?hash=${
+  <a href="${process.env.SERVER_URL}/auth/verify?hash=${
               data.confirmHash
             }">link</a>`,
           }
