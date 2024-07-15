@@ -16,7 +16,7 @@ passport.use(new LocalStrategy(async (username,password,done) => {
         } 
 
         if(user.password === generateMD5(password + process.env.SECRET_KEY)) {
-            return done(null, user)
+            return done(null, user.toJSON())
         } else {
             return done(null, false)
         }

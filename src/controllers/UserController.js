@@ -117,6 +117,7 @@ class UserController {
           }
         );
       } catch(err) {
+        await UserModel.deleteOne({ _id: user._id });
         throw new Error(err);
       }
 

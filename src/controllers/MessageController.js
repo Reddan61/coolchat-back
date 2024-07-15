@@ -22,7 +22,6 @@ class MessageController {
         data: rooms,
       });
     } catch (e) {
-      
       res.status(500).json(createResponseError(e));
     }
   }

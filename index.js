@@ -6,7 +6,7 @@ const express = require("express");
 
 const { registerValidations } = require("./src/validations/register");
 const {
-  fargotPasswordValidation,
+  forgotPasswordValidation,
   resetPasswordValidation,
 } = require("./src/validations/reset");
 const { UserCtrl } = require("./src/controllers/UserController");
@@ -72,8 +72,8 @@ app.put(
   UserCtrl.updateAvatar
 );
 app.post(
-  "/users/fargotPassword",
-  fargotPasswordValidation,
+  "/users/forgotPassword",
+  forgotPasswordValidation,
   UserCtrl.fargotPassword
 );
 app.post(

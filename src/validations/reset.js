@@ -1,6 +1,6 @@
 const validator = require("express-validator");
 
-module.exports.fargotPasswordValidation = [validator.body('email', "Write E-Mail")
+module.exports.forgotPasswordValidation = [validator.body('email', "Write E-Mail")
     .isEmail()
     .withMessage("Wrong E-Mail")];
 
